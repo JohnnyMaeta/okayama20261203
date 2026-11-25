@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>作るのは道具、選ぶのは人｜岡山大安寺中等教育学校 校内教員研修 特設ページ（前多昌顕）</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --ink: #22242a; --muted: #6b6f76; --line: #e4e4e0;
+    --accent: #1e5573; --accent-soft: #e6eef4; --code-bg: #1e2127; --code-ink: #e6e6e6;
+    --note-bg: #fff8e6; --note-line: #e8d48a; --note-ink: #6b5310;
+    --hot: #b3252c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d; --panel: #1e2127; --ink: #e7e8ea; --muted: #9aa0a8; --line: #313640;
+      --accent: #7fb6d8; --accent-soft: #1c2630; --code-bg: #12141a; --code-ink: #e6e6e6;
+      --note-bg: #2a2617; --note-line: #5c5024; --note-ink: #e0cf90;
+      --hot: #e8868b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+    line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 40px 20px 80px; }
+  header.page { border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 8px; }
+  header.page h1 { font-size: 1.6rem; margin: 0 0 6px; letter-spacing: .01em; }
+  header.page .sub { color: var(--muted); font-size: .95rem; margin: 0; }
+  .lead { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin: 24px 0 32px; font-size: .95rem; }
+  .lead h2 { font-size: 1rem; margin: 0 0 8px; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 32px; }
+  nav.toc a { text-decoration: none; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 4px 12px; font-size: .85rem; }
+  section.step { margin-bottom: 44px; }
+  section.step > h2 { font-size: 1.25rem; border-left: 5px solid var(--accent); padding-left: 12px; margin: 0 0 10px; }
+  section.step h3 { font-size: 1.05rem; margin: 22px 0 8px; }
+  .what { color: var(--muted); font-size: .93rem; margin: 0 0 12px; }
+  .note { background: var(--note-bg); border: 1px solid var(--note-line); color: var(--note-ink); border-radius: 8px; padding: 10px 14px; font-size: .86rem; margin: 12px 0; }
+  .note.calm { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+  .codewrap { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); margin: 14px 0; }
+  .codebar { display: flex; justify-content: space-between; align-items: center; background: var(--code-bg); padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .codebar .fname { color: #9aa7b8; font-size: .78rem; font-family: "SF Mono", Menlo, Consolas, monospace; }
+  .copy-btn { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 5px 14px; font-size: .8rem; cursor: pointer; white-space: nowrap; }
+  .copy-btn:hover { filter: brightness(1.08); }
+  .copy-btn.done { background: #3a6a4a; }
+  pre { margin: 0; background: var(--code-bg); color: var(--code-ink); padding: 16px; overflow-x: auto; font-size: .86rem; line-height: 1.7; white-space: pre-wrap; word-break: break-all; }
+  pre code { font-family: "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  .video { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 8px 0 4px; border-radius: 10px; overflow: hidden; background: #000; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .btnlink { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; border-radius: 8px; padding: 10px 20px; font-size: .95rem; margin: 6px 4px 6px 0; }
+  .btnlink:hover { filter: brightness(1.08); }
+  .btnlink.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .btnlink.big { font-size: 1.05rem; padding: 14px 24px; }
+  ol.steps { padding-left: 1.3em; } ol.steps li { margin: 10px 0; }
+  ul.checks { padding-left: 1.3em; } ul.checks li { margin: 10px 0; }
+  table.rub { width: 100%; border-collapse: collapse; font-size: .92rem; margin: 12px 0; }
+  table.rub th, table.rub td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  table.rub th { background: var(--accent-soft); width: 32%; }
+  table.rub3 th { width: auto; font-size: .85rem; }
+  table.rub3 th:first-child { width: 17%; }
+  table.rub3 td { font-size: .85rem; }
+  .line3 { background: var(--panel); border: 2px solid var(--accent); border-radius: 12px; padding: 16px 20px; text-align: center; font-size: 1.15rem; font-weight: 700; margin: 12px 0; }
+  .line3 small { display: block; font-weight: 400; font-size: .9rem; color: var(--muted); margin-top: 6px; }
+  .haiku { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 8px 0; font-size: 1.02rem; }
+  .haiku b { color: var(--accent); margin-right: .5em; }
+  .one { background: var(--panel); border: 1px solid var(--line); border-left: 5px solid var(--hot); border-radius: 10px; padding: 14px 18px; margin: 12px 0; }
+  .one h4 { margin: 0 0 4px; font-size: 1.02rem; }
+  .one p { margin: 0; font-size: .89rem; color: var(--muted); }
+  .voices blockquote { margin: 8px 0; padding: 8px 14px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; font-size: .93rem; }
+  .reply { background: var(--accent-soft); border-radius: 10px; padding: 10px 14px; margin: 10px 0 16px; font-size: .92rem; }
+  .cta { background: var(--accent-soft); border-radius: 12px; padding: 18px 20px; margin-top: 40px; font-size: .95rem; }
+  .cta strong { color: var(--accent); }
+  footer.page { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .86rem; }
+  @media (max-width: 600px) { .wrap { padding: 24px 14px 60px; } header.page h1 { font-size: 1.3rem; } pre { font-size: .82rem; } }
+  .pending { display:inline-block; border:1px dashed var(--muted); color:var(--muted); border-radius:8px; padding:10px 20px; font-size:.95rem; margin:6px 4px 6px 0; }
+  blockquote.q { margin: 8px 0; padding: 10px 14px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; font-size: .93rem; }
+  blockquote.q cite { display:block; color: var(--muted); font-size: .82rem; font-style: normal; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>作るのは道具、選ぶのは人｜特設ページ</h1>
+  <p class="sub">岡山県立岡山大安寺中等教育学校 校内教員研修（2026年12月3日）／前多昌顕</p>
+</header>
+
+<div class="lead">
+  <h2>このページがあるので、メモは取らなくて大丈夫です</h2>
+  <p>ワークで使う手順も、AIに貼る文も、道具のリンクも、<strong>全部ここに置いてあります</strong>。画面を追いかけるより、手を動かすことと「自分の教科だとどうかな」と考えることに時間を使ってください。</p>
+  <p>今日お見せするのは、<strong>地方の公立小学校の一事例</strong>です。そのまま真似していただく必要はありません。自分の教科に置き換える作業は、先生方にお任せします。</p>
+  <p style="margin-bottom:0"><strong>うまく開けない方は、隣の方と2人で1台で構いません。</strong>出入りも自由です。「全員が自分の端末でできたか」を競う会ではありません。</p>
+</div>
+
+<nav class="toc">
+  <a href="#three">今日の操作</a>
+  <a href="#shakai">③ 話し合いをまとめる</a>
+  <a href="#kokugo">④ 俳句</a>
+  <a href="#one">⑥ 明日の1個</a>
+  <a href="#privacy">個人情報の根拠</a>
+  <a href="#tools">道具</a>
+  <a href="#reflect">振り返り</a>
+</nav>
+
+<section class="step" id="three">
+  <h2>今日、手を動かす操作は3つだけです</h2>
+  <p class="what">時間はありますが、覚えていただくのはこれだけです。あとは全部おまけです。</p>
+  <div class="line3">録って　／　入れて　／　「まとめて」と言う
+    <small>先生が覚える操作は、1つずつです</small></div>
+  <table class="rub">
+    <tr><th>道具がやること</th><td>全部拾う・一瞬でまとめる・たくさん案を出す</td></tr>
+    <tr><th>人がやること</th><td>どれを採るかを<strong>選ぶ</strong>・どこが良いかを<strong>言う</strong>・直すか直さないかを<strong>決める</strong></td></tr>
+    <tr><th>先生がやること</th><td>ものさしを渡す・まとまったものから<strong>次の問いを決める</strong></td></tr>
+  </table>
+  <div class="note calm">作業はスキップしていい。でも、思考はスキップさせない。今日はそれだけの話です。</div>
+</section>
+
+<section class="step" id="shakai">
+  <h2>③ 話し合い → 録音 → その場でまとめる</h2>
+  <p class="what">小学校5年社会「食料生産をささえる人々」の実践です。チラシを見て「この食品は、どこから来たのか」を話し合い、録音して <strong>Gemini Notebook</strong> にまとめてもらいます。今日は、皆さんが5年生の役です。</p>
+
+  <h3>使うチラシ</h3>
+  <p><a class="btnlink big" href="https://tokubai.co.jp/" target="_blank" rel="noopener">トクバイ（チラシ）を開く</a></p>
+  <p class="what">近くの店のチラシを1枚開いて、産地の表示を手がかりに話し合ってください。</p>
+
+  <h3>やること①　録音を回してから、話し合う</h3>
+  <ol class="steps">
+    <li>班の代表が1人だけ、下の「録音する道具」を開く</li>
+    <li><strong>グループ名を入れる</strong>（「1班」「2班」…）。空欄だと保存できません。わざとそうしてあります</li>
+    <li>録音ボタンを押して、机の真ん中に置く。あとは、いつもどおり話し合うだけです（<strong>1本6分まで</strong>）</li>
+  </ol>
+  <p><span class="pending" id="rec-pending">録音する道具のリンクは、当日ここに表示します</span><a class="btnlink big" id="lnk-record" href="#" style="display:none">録音する道具を開く</a></p>
+  <div class="line3">まとめなくて、いいです。
+    <small>出しっぱなしで構いません。まとめるのは、あとで道具がやります</small></div>
+
+  <h3>やること②　終わった班から保存する</h3>
+  <p class="what">保存ボタンを1回押すだけです。押した班から順に、前多が Gemini Notebook に入れていきます。全部の班が終わるのを待ちません。</p>
+
+  <h3>やること③　まとめてもらう</h3>
+  <p class="what">授業では、先生が下の文を Gemini Notebook に貼ります。コピーボタンで、打たずに貼れます。</p>
+  <div class="codewrap">
+    <div class="codebar"><span class="fname">全班の話し合いをまとめる</span>
+      <button class="copy-btn" data-copy="p-matome">コピー</button></div>
+    <pre><code id="p-matome">全部の班の話し合いを、まとめてください。
+・班ごとに、どんなことに注目していたかが分かるように書いてください。
+・出ていた意見は、少数のものも落とさずに拾ってください。
+・分かりやすい言葉で、箇条書きでお願いします。</code></pre>
+  </div>
+  <div class="note calm"><strong>「少数のものも落とさずに」を入れてください。</strong>入れないと、多数派の意見だけがまとまって、静かな子の一言が消えます。</div>
+
+  <h3>やること④　出てきたまとめで、次の発問をする</h3>
+  <p class="what">「A班は外国産に、B班は県内産に注目していました。では――」。まとめは次の時間ではなく、<strong>この45分の中で戻ってきます</strong>。</p>
+
+  <h3>何が変わったのか</h3>
+  <ul class="checks">
+    <li><strong>聞いて回れるのは、1〜2班だけでした。</strong>残りの班で何が話されたかは、これまで分からないままでした</li>
+    <li><strong>まとめるのはAI、どこを次の入口にするかは教師です。</strong>まとめる作業は渡しました。「次にどこを問うか」は渡していません。そこが授業です</li>
+    <li><strong>浮いた時間で何をするか。</strong>時短して終わりなら、楽をしただけです。浮いた時間で考える・反論する時間を取れるかが、問いです</li>
+  </ul>
+  <div class="note"><strong>子どもの声を録るのが難しい場合。</strong>まず<strong>職員の協議</strong>から試してください。校内の協議を録ってまとめさせると、そのまま記録の下書きになります。録音・保存・取り扱いは、各校・教育委員会の定めに従ってください。</div>
+</section>
+
+<section class="step" id="kokugo">
+  <h2>④ 選ぶのは人　――　AIに直させないで、俳句を作る</h2>
+  <p class="what">小学校国語の実践の圧縮版です。AIが入るのは後半だけ。<strong>最初の一句は必ず自力</strong>、そして<strong>最後は必ず自分の句に戻ります</strong>。お題は「この秋の、ひとコマ」です。</p>
+
+  <div class="line3">ものさしは、提示するものではなく、使わせるもの。
+    <small>配った瞬間は、まだ読まれていません。読み返されるのは「評価する側」に立ったときだけです</small></div>
+
+  <h3>ものさし（3観点）を、先に配ります</h3>
+  <table class="rub rub3">
+    <tr><th></th><th>A　よくできている</th><th>B　できている</th><th>C　もう少し</th></tr>
+    <tr><th>1　音数とリズム</th><td>五・七・五で、声に出すと気持ちよく読める。字余り・字足らずも、ねらいが感じられればA</td><td>ほぼ五・七・五。声に出すと、少しつかえるところがある</td><td>音数がばらばらで、リズムが取れない</td></tr>
+    <tr><th>2　季語</th><td>季節が伝わる言葉があり、その季節の景色が目に浮かぶ。季重なりでも、景色が浮かべばA</td><td>季節の言葉はあるが、景色はあまり浮かばない</td><td>季節が伝わる言葉がない</td></tr>
+    <tr><th>3　表現の工夫</th><td>比喩・反復・言葉の順序・漢字と仮名の使い分けのどれかを、ねらって使い、句の印象が深まっている</td><td>工夫は見られるが、ねらいや効果がはっきりしない</td><td>見たままを説明しているだけで、工夫が見られない</td></tr>
+  </table>
+
+  <h3>やること①　まず、自分で一句（AIには触りません）</h3>
+  <p class="what">紙でも、端末のメモでも構いません。うまく作ろうとしなくて大丈夫です。<strong>ゼロから一をつくるところは、渡しません。</strong>ここを任せた瞬間に、創作の学びが消えます。</p>
+
+  <h3>やること②　自分の句を、AIに見てもらう</h3>
+  <p class="what">当日は、前多が用意した「俳句の助言」ノートブックを使います。</p>
+  <p><span class="pending" id="nb-pending">ノートブックのリンクは、当日ここに表示します</span><a class="btnlink big" id="lnk-notebook" href="#" style="display:none">「俳句の助言」ノートブックを開く</a></p>
+  <p class="what">開けなかった場合、ご自分で作る方法もあります（約5分）。Gemini Notebook で新しいノートブックを作り、下の2つの文を<strong>「ソース」として貼り付け</strong>て、チャットに自分の句を貼ってください。</p>
+  <div class="codewrap">
+    <div class="codebar"><span class="fname">ソース1：ものさし</span>
+      <button class="copy-btn" data-copy="p-rubric">コピー</button></div>
+    <pre><code id="p-rubric">1　音数とリズム
+A：五・七・五で、声に出すと気持ちよく読める。字余り・字足らずも、ねらいが感じられればA
+B：ほぼ五・七・五。声に出すと、少しつかえるところがある
+C：音数がばらばらで、リズムが取れない
+2　季語
+A：季節が伝わる言葉があり、その季節の景色が目に浮かぶ。季重なりでも、景色が浮かべばA
+B：季節の言葉はあるが、景色はあまり浮かばない
+C：季節が伝わる言葉がない
+3　表現の工夫
+A：比喩・反復・言葉の順序・漢字と仮名の使い分けのどれかを、ねらって使い、句の印象が深まっている
+B：工夫は見られるが、ねらいや効果がはっきりしない
+C：見たままを説明しているだけで、工夫が見られない</code></pre>
+  </div>
+  <div class="codewrap">
+    <div class="codebar"><span class="fname">ソース2：助言のルール</span>
+      <button class="copy-btn" data-copy="p-advice">コピー</button></div>
+    <pre><code id="p-advice">このノートブックに、ひとつの俳句を貼ります。次の決まりで助言してください。
+・ソースの「ものさし」に照らして、3つの観点をそれぞれA・B・Cで評価し、そう評価した理由を、句の言葉を引用して一言ずつ書く。
+・そのあと、良いところを一つ、もっと良くなる提案を二つ書く。
+・直した句は、示さない。例も出さない。
+・字余り・字足らずは、ねらいが感じられればおおらかに扱う。季重なりも、景色が浮かべばおおらかに扱う。決まりを機械的に指摘しない。
+・読み手が小学生でも分かる言葉で書く。</code></pre>
+  </div>
+  <div class="note calm"><strong>「直した句は示さない」が、いちばん大事な一行です。</strong>完成形を見せられたら、写して終わります。採用するのも、却下するのも作者です。<strong>却下も、立派な推敲です。</strong></div>
+
+  <h3>やること③　AIが作った5句を、ものさしで評価する</h3>
+  <p class="what">隣の2〜3人で、5句を評価してください。いちばん良い句を1つ選びます。良い句は良いと言う。物足りない句は、どこが物足りないかを言う。あら探し大会ではありません。</p>
+  <div class="haiku"><b>1</b>秋が来て　木の葉が赤く　なりました</div>
+  <div class="haiku"><b>2</b>秋風に　名前をよばれた　気がしただけ</div>
+  <div class="haiku"><b>3</b>今日はとてもいい天気だったのでうれしい気持ちになりました</div>
+  <div class="haiku"><b>4</b>新米の　湯気の向こうに　母の顔</div>
+  <div class="haiku"><b>5</b>月の下　だんごみっつが　雪のよう</div>
+  <div class="note calm">評価が割れて構いません。ものさしは○×をつける道具ではなく、<strong>どこを見るかを決める道具</strong>です。</div>
+
+  <h3>やること④　自分の句に戻る</h3>
+  <p class="what">直したか、直さなかったか。<strong>理由を1行だけ</strong>書いてください。直すのも、直さないと決めるのも、作者です。</p>
+
+  <h3>渡したもの、渡さなかったもの</h3>
+  <table class="rub">
+    <tr><th>渡したもの</th><td>助言／練習台の5句</td></tr>
+    <tr><th>渡さなかったもの</th><td>最初の一句／評価と、採用・却下の決定</td></tr>
+  </table>
+</section>
+
+<section class="step" id="one">
+  <h2>⑥ 自分の教科で、明日の1個だけ</h2>
+  <p class="what">全部やろうとしなくて大丈夫です。<strong>丸は1つだけ。</strong>小学校の事例を自分の教科にどう置くかは、先生方が決めます。</p>
+  <div class="one"><h4>1　次の話し合い活動で、1つの班だけ録音して、その時間の中でNotebookに「まとめて」と入れる</h4><p>③の置き換えです</p></div>
+  <div class="one"><h4>2　評価のものさしを先に配って、AIの出力を生徒に評価させる</h4><p>④の置き換えです。AIが出したものを「選ぶ」練習台にします</p></div>
+  <div class="one"><h4>3　校内の協議や会議を録音して、記録の下書きをAIに作らせる</h4><p>校務です。子どもの声を録るのが難しい場合の入口になります</p></div>
+  <div class="note calm"><strong>3回やらないと、わかりません。</strong>1回目は見る、2回目は一緒に、3回目は自分で。手順を見ながら、もう一度、同じ手順でやってみてください。</div>
+</section>
+
+<section class="step" id="privacy">
+  <h2>個人情報と生成AI　――　公式の文書に、何と書いてあるか</h2>
+  <p class="what">研修の最後にお見せした内容です。<strong>管理職・推進担当の先生が、校内で説明するときの根拠</strong>に使ってください。ここに並べたのは公式の文言だけです（確認日 2026年11月25日）。</p>
+
+  <h3>文部科学省「初等中等教育段階における生成AIの利活用に関するガイドライン」Ver.2.0（令和6年12月26日）</h3>
+  <blockquote class="q">…提供者が当該個人情報を機械学習に利用するか否か等を十分に確認すべきである。<cite>教職員の利用について（p.15〜16）</cite></blockquote>
+  <blockquote class="q">…応答結果の出力以外の目的で取り扱わないことを確認している場合は除く<cite>チェックリスト（p.24）</cite></blockquote>
+  <blockquote class="q">氏名や写真等の個人情報を入力させないよう留意する<cite>児童生徒の利用について（p.19）。教職員の話とは別の定めです</cite></blockquote>
+  <blockquote class="q">一律に禁止したり、義務付けたりするような硬直的な運用は望ましくない<cite>教育委員会等について（p.21）。導入に当たっての確認は p.22</cite></blockquote>
+
+  <h3>Google</h3>
+  <blockquote class="q">学校・組織のアカウントでは、チャットとアップロードしたファイルが、人によるレビューにも、生成AIモデルの改善にも使われない（Gemini Notebook も同旨）<cite>Google Workspace ヘルプ「Google Workspace with Gemini for Education に関するよくある質問」（最終更新 2026年11月12日）。要旨であり、原文は上記ページで確認してください</cite></blockquote>
+
+  <div class="note"><strong>確かめていただきたいこと。</strong>
+    <ul style="margin:6px 0 0">
+      <li>Googleの明示は、<strong>学校・組織（Workspace for Education）のアカウント</strong>についてです。個人のアカウントは規約が別です。ご自分のアカウントの種類を確かめてください</li>
+      <li>「何でも入れてよい」という意味ではありません。学校・教育委員会の情報セキュリティポリシーには従ってください</li>
+      <li>引用は要点だけです。必ず原文のページ・版を確認してから使ってください</li>
+    </ul></div>
+
+  <div class="note calm"><strong>これは、現場の一人の先生の「がんばり」で動かせる話ではありません。</strong>どのサービスなら使ってよいかを確かめ、線を引き、決めて、先生方に伝える。それができるのは、決定権のある方です。</div>
+</section>
+
+<section class="step" id="tools">
+  <h2>今日使った道具</h2>
+  <ul class="checks">
+    <li><strong>Gemini Notebook</strong>（旧 NotebookLM）：学校のGoogleアカウントで開けるかどうかは、各校の設定によります</li>
+    <li><strong>トクバイ</strong>：<a href="https://tokubai.co.jp/" target="_blank" rel="noopener">tokubai.co.jp</a>（チラシ）</li>
+    <li><strong>録音する道具</strong>（スーパー記録くん）：上の③に、当日リンクを表示します</li>
+  </ul>
+</section>
+
+<section class="step" id="reflect">
+  <h2>今日の振り返り</h2>
+  <p class="what">帰ってからで構いません。声で吹き込んでも、文字で打っても構いません。</p>
+  <p><span class="pending" id="ref-pending">振り返りのリンクは、当日ここに表示します</span><a class="btnlink big" id="lnk-reflect" href="#" style="display:none">振り返りを入れる</a></p>
+</section>
+
+<div class="cta">
+  <p style="margin-top:0"><strong>作るのは道具。選ぶのは、人。</strong><br>
+  楽しそうな先生が、最高の教育環境です。</p>
+  <p style="margin-bottom:0">
+    <a class="btnlink ghost" href="https://bit.ly/maeta-kenshu">研修・講演メニュー</a>
+    <a class="btnlink ghost" href="https://www.youtube.com/@maetaict">YouTube</a>
+  </p>
+</div>
+
+<footer class="page">
+  岡山県立岡山大安寺中等教育学校 校内教員研修（令和8年度 高等学校DX加速化推進事業・2026年12月3日）／前多昌顕（五所川原市立五所川原小学校）<br>
+  このページは研修参加者向けの資料置き場です。
+</footer>
+
+</div>
+<script>
+  // 当日までに差し替えるURL（空のままなら「当日表示します」の枠が出る）
+  var RECORD_URL = "";    // 録音する道具（neo2の当日用環境）
+  var NOTEBOOK_URL = "";  // 「俳句の助言」ノートブック
+  var REFLECT_URL = "";   // 振り返り
+  [["lnk-record","rec-pending",RECORD_URL],["lnk-notebook","nb-pending",NOTEBOOK_URL],["lnk-reflect","ref-pending",REFLECT_URL]].forEach(function (t) {
+    var a = document.getElementById(t[0]), p = document.getElementById(t[1]);
+    if (a && t[2]) { a.href = t[2]; a.target = "_blank"; a.rel = "noopener"; a.style.display = ""; if (p) p.style.display = "none"; }
+  });
+  document.querySelectorAll(".copy-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var el = document.getElementById(btn.dataset.copy);
+      if (!el) return;
+      navigator.clipboard.writeText(el.textContent).then(function () {
+        var old = btn.textContent;
+        btn.textContent = "コピーしました";
+        btn.classList.add("done");
+        setTimeout(function () { btn.textContent = old; btn.classList.remove("done"); }, 1600);
+      });
+    });
+  });
+</script>
+</body>
+</html>
